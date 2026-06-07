@@ -1,0 +1,10 @@
+git:file:revert() {
+    local file="$1"
+
+    if [ -z "$file" ]; then
+        echo "usage: git:file:revert FILE"
+        return 1
+    fi
+
+    git restore "$file"
+}
