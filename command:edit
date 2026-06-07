@@ -7,4 +7,5 @@ command:edit() {
     fi
     vi ~/command/$arg1
     command:reload
+    command:change "Edited $arg1"
 }
