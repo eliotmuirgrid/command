@@ -7,4 +7,5 @@ command:change() {
     fi
 
     cd ~/command && git add . && git commit -m "$comment" && git push
+    echo "CHANGE: $comment"
 }
