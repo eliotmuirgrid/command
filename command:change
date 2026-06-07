@@ -10,7 +10,7 @@ command:change() {
 
     git add -A || return 1
     git commit -m "$comment" >/dev/null || return 1
-    git push >/dev/null || return 1
+    git push --quiet || return 1
 
     echo "$comment"
 }
