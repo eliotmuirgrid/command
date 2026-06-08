@@ -1,0 +1,3 @@
+web:ping() {
+   ping $WEB_IP
+}
