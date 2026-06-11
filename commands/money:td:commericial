@@ -1,0 +1,4 @@
+money:td:commericial() {
+   open "https://businessbanking.tdcommercialbanking.com/WBB/Login"
+}
+
