@@ -1,0 +1,5 @@
+comm:linkedin() {
+   open "https://www.linkedin.com/feed/"
+}
+
+
