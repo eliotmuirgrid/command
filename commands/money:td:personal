@@ -1,0 +1,4 @@
+money:td:personal() {
+  open "https://authentication.td.com/uap-ui/?consumer=easyweb&locale=en_CA#/uap/login"
+}
+
