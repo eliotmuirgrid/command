@@ -1,3 +1,4 @@
+#Need to autoplay
 music:play(){    
    local query="$*"
    open "https://open.spotify.com/search/${query// /%20}"
