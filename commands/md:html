@@ -1,5 +1,4 @@
 md:html() {
     local file="${1%.md}"
-    pandoc -s "${file}.md" -o "${file}.html"
-    open "${file}.html"
+    pandoc -s "${file}.md"
 }
