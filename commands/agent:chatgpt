@@ -15,6 +15,6 @@ agent:chatgpt() {
 
     response=$(filter:trim:begin "$response" 'text"')
     response=$(filter:trim:begin "$response" ': "')
-    response=$(filter:trim:end "$response" '"')
+    response=$(filter:trim:end "$response" '"role": "assistant"')
     echo "$response"
 }
