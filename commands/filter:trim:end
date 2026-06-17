@@ -1,10 +1,10 @@
 filter:trim:end() {
-    local search="$1"
+   local search="$1"
 
-    if [[ -z "$search" ]]; then
-        echo "Usage: filter:trim:end <search>"
-        return 1
-    fi
+   if [[ -z "$search" ]]; then
+      echo "Usage: filter:trim:end <search>"
+      return 1
+   fi
 
-    echo "$search"
+   sed "s/${search}.*//"
 }
