@@ -1,0 +1,19 @@
+agent:file() {
+   local agent="$1"
+   local file="$2"
+   shift 2
+
+   local prompt="$*"
+
+   if [[ ! -f "$file" ]]; then
+      echo "agent:file: '$file' not found" >&2
+      return 1
+   fi
+
+   echo "$agent $file $prompt"
+#   {
+#      [[ -n "$prompt" ]] && echo "$prompt"
+#      echo
+#      cat "$file"
+#   } | "$agent"
+}
