@@ -1,0 +1,11 @@
+key:get() (
+    local name="$1"
+
+    [ -n "$name" ] || {
+        echo "usage: key:get <name>" >&2
+        return 1
+    }
+
+    . "$HOME/.${name}" || return 1
+    printf '%s\n' "$KEY"
+)
