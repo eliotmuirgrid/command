@@ -1,4 +1,6 @@
 filter:trim:begin() {
+
+
    sed -n "/$1/,\$p"
 }
 
