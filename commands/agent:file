@@ -13,7 +13,7 @@ agent:file() {
    echo "$agent $file $prompt"
    cprompt="$prompt:$(file:read $file)"
 
-   echo cprompt
+   echo $cprompt
    
 #   {
 #      [[ -n "$prompt" ]] && echo "$prompt"
