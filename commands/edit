@@ -1,5 +1,5 @@
 edit() {
    local file=$(filter:extension:remove "${1:-i}")
-   vi "${file}.md"
+   vi -S ~/command/vim/Go.vim "${file}.md"
 }
 
