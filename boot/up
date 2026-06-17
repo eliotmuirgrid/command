@@ -7,3 +7,6 @@ for f in $CMD_DIR/*; do
   #echo "Install $f"
   source "$f"
 done
+
+# Get VIM to use custom commands
+echo "set runtimepath^=$HOME/command/vim" > $HOME/.vimrc
