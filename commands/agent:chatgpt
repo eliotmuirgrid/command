@@ -1,0 +1,9 @@
+agent:chatgpt() {
+    local key=$(key:get chatgpt)
+
+    curl -s https://api.openai.com/v1/responses \
+        -H "Authorization: Bearer $key" \
+        -H "Content-Type: application/json" \
+        -d "{\"model\":\"gpt-4.1\",\"input\":\"$*\"}" |
+        jq -r '.output_text'
+}
