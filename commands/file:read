@@ -1,0 +1,3 @@
+file:read() {
+   cat $1
+}
