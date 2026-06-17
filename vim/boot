@@ -1,0 +1,4 @@
+
+for file in split(glob('~/command/vim/*.vim'), '\n')
+    execute 'source' fnameescape(file)
+endfor
