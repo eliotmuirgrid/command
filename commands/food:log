@@ -1,0 +1,25 @@
+food:log() {
+    local name=$1
+    local quantity=$2
+
+    local file="$HOME/press/health/food_$(date '%Y-%m-%d.md)"
+
+    [[ -z "$name" ]] && {
+        echo "Usage: food:log <food> <quantity>" >&2
+        return 1
+    }
+
+    mkdir -p "${file:h}"
+
+    if [[ ! -f "$file" ]]; then
+        cat > "$file" <<EOF
+| Time | Food | Quantity |
+|------|------|----------|
+EOF
+    fi
+
+    printf '| %s | %s | %s |\n' \
+        "$(date '%H:%M')" \
+        "$name" \
+        "$quantity" >> "$file"
+}
