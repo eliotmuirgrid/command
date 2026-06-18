@@ -19,5 +19,6 @@ EOF
     fi
     local time=$(date '%H:%M');
 
-    echo "|$time|$name|$quantity|" >> $file
+    echo "|$time|$name|$quantity|"
+
 }
