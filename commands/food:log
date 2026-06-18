@@ -2,7 +2,7 @@ food:log() {
     local name=$1
     local quantity=$2
 
-    local file="$HOME/press/health/food_$(date -f 'yy-mm-dd').md"
+    local file="$HOME/press/health/food_$(date -f '%Y-%m-%d').md"
 
     [[ -z "$name" ]] && {
         echo "Usage: food:log <food> <quantity>" >&2
@@ -17,7 +17,7 @@ food:log() {
 |------|------|----------|
 EOF
     fi
-    local time=$(date 'HH:MM');
+    local time=$(date '+%h:%m');
 
     echo "|$time|$name|$quantity|"
 
