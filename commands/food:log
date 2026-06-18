@@ -17,6 +17,7 @@ food:log() {
 |------|------|----------|
 EOF
     fi
+    local time=$(date '%H:%M');
 
-    echo "$(date '%H:%M')|$name|$quantity|" >> $file
+    echo "|$time|$name|$quantity|" >> $file
 }
