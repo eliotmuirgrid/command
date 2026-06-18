@@ -1,5 +1,5 @@
 edit() {
    local file=$(filter:extension:remove "${1:-i}")
-   vi -S ~/command/vim/boot "${file}.md"
+   nvim -c "lua require('boot') "${file}.md"
 }
 
