@@ -10,12 +10,11 @@ agent:file() {
       return 1
    fi
 
-   echo "$agent $file $prompt"
+   #echo "$agent $file $prompt"
    cprompt="$(json:escape $prompt:$(file:read $file))"
 
-   echo $cprompt
+   #echo $cprompt
     echo "$(agent:$agent \'$cprompt\')"   
- #   echo "$(agent:$agent 'Describe balloons')"   
 #   {
 #      [[ -n "$prompt" ]] && echo "$prompt"
 #      echo
