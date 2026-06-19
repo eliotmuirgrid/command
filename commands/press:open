@@ -1,4 +1,4 @@
 press:open() {
-   local 
-   open "https://github.com/eliotmuirgrid/press"
+   local MdPath = md:path($1); 
+   open "https://github.com/eliotmuirgrid/$MdPath"
 }
