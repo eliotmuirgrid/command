@@ -1,5 +1,7 @@
 edit() {
-   local file=$(filter:extension:remove "${1:-i}")
-   nvim -c "lua require('boot')" "${file}.md"
-}
+    local file="${1:-i.md}"
 
+    [[ "$file" != *.* ]] && file="${file}.md"
+
+    nvim -c "lua require('boot')" "$file"
+}
