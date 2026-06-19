@@ -1,5 +1,8 @@
 press:open() {
-   local File=$1;
-   local MdPath="($md:path($File))"; 
-   open "https://github.com/eliotmuirgrid/$MdPath"
+    local file="${1:-i}"
+    local md_path
+
+    md_path="$(md:path "$file")"
+
+    open "https://github.com/eliotmuirgrid${md_path}"
 }
