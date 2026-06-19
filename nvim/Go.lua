@@ -10,4 +10,4 @@ local Go = function()
     end
 end
 
-return Go;
+return Go, {};
