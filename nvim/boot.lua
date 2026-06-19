@@ -1,11 +1,18 @@
 function FileRead(Name)
-   local file = io.open(name, "r")
-   if not file then
+   local File = io.open(Name, "r")
+   if not File then
       return nil
    end
-   local content = file:read("*a")
-   file:close()
-   return content
+   local Content = File:read("*a")
+   File:close()
+   return Content
+end
+
+function KeyGet(Name)
+   local F = os.getenv('HOME').."/."..Name;
+   local C = FileRead(F);
+   local V = C:match("^KEY%s*=%s*(.-)%s*$")
+   print(V);
 end
 
 function Insert(text)
@@ -29,8 +36,8 @@ end
 local Path = os.getenv('HOME').."/command/nvim/"
 
 for Name in vim.fs.dir(Path) do
-   local FName = StripExtension(Name);
-   if FName ~= 'boot' then
+   if Name ~= 'boot.lua' and Name:sub(1,1) ~= "." then
+      local FName = StripExtension(Name);
       local Func = require(FName);
       vim.api.nvim_create_user_command(FName, Func, {nargs="+"});
    end
