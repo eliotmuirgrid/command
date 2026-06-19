@@ -1,3 +1,4 @@
 press:open() {
+   local 
    open "https://github.com/eliotmuirgrid/press"
 }
