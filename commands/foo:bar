@@ -1,0 +1,9 @@
+foo:bar() {
+    if [[ -z "$1" ]] || [[ -z "$2" ]]; then
+        echo "Usage: foo:bar <arg1> <arg2>"
+        return 1
+    fi
+
+    echo "arg1: $1"
+    echo "arg2: $2"
+}

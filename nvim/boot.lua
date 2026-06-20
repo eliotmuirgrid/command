@@ -70,6 +70,12 @@ function Insert(text)
     )
 end
 
+function JsonUnescape(s)
+   return s 
+end
+
+--vim.json.decode(s);
+
 AgentGpt = function(Prompt)
    local Key = KeyGet('chatgpt');
    local P = {}
@@ -80,10 +86,11 @@ AgentGpt = function(Prompt)
    P.headers["Content-Type"] = 'application/json';
    P.data = {model="gpt-4.1", input=Prompt}
    local Response = HttpPost(P);
-   print(Response);
-   Response = FilterTrimBegin(Response,'"text"');
+   Response = FilterTrimBegin(Response,'"text": \"');
    Response = FilterTrimEnd(Response,'"role": "assistant"')
    Response = FilterTrimEnd(Response, '"');
+
+   Response = JsonUnescape(Response);
    return Response;
 end
 
