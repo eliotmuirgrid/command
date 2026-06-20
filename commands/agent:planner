@@ -1,0 +1,8 @@
+agent:planner() {
+    if [[ -z "$1" ]];  then
+        echo "Usage: agent:planner <task>"
+        return 1
+    fi
+
+    agent:file chatgpt $HOME/command/lua/planner.md $1 | glow
+}
