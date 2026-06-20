@@ -1,11 +1,11 @@
 agent:planner() {
-    if [[ -z "$1" ]];  then
-        echo "Usage: agent:planner <task>"
-        return 1
-    fi
+   if [[ -z "$1" ]];  then
+      echo "Usage: agent:planner <task>"
+      return 1
+   fi
 
-    local out="$(agent:file chatgpt $HOME/command/lua/planner.md $1)"
+   local out="$(agent:file chatgpt $HOME/command/lua/planner.md $1)"
 
 
-    echo $out |glow
+   echo $out |glow
 }

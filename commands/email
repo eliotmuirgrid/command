@@ -3,12 +3,13 @@ email () {
    local pdf
    pdf=$(mktemp /tmp/${file}.letter.pdf)
 
+   # TODO dependencies to remove
    pandoc "${file}.md" \
         --resource-path=".:$HOME/windup/letterhead" \
         --pdf-engine=xelatex \
         -o "$pdf" || return 1
 
-    osascript <<EOF
+   osascript <<EOF
 tell application "Mail"
     activate
 
@@ -20,6 +21,6 @@ tell application "Mail"
 end tell
 EOF
 
-    # Give Mail time to copy the attachment
-    ( sleep 30; rm -f "$pdf" ) &
+   # Give Mail time to copy the attachment
+   ( sleep 30; rm -f "$pdf" ) &
 }

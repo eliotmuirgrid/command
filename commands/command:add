@@ -1,30 +1,30 @@
 command:add() {
-    local name="$1"
+   local name="$1"
 
-    if [[ -z "$name" ]]; then
-        echo "Usage: command:add <command-name>"
-        return 1
-    fi
+   if [[ -z "$name" ]]; then
+      echo "Usage: command:add <command-name>"
+      return 1
+   fi
 
-    local file="$CMD_DIR/$name"
+   local file="$CMD_DIR/$name"
 
-    if [[ ! -e "$file" ]]; then
-        cat > "$file" <<EOF
+   if [[ ! -e "$file" ]]; then
+      cat > "$file" <<EOF
 $name() {
-    if [[ -z "\$1" ]] || [[ -z "\$2" ]]; then
-        echo "Usage: $name <arg1> <arg2>"
-        return 1
-    fi
+   if [[ -z "\$1" ]] || [[ -z "\$2" ]]; then
+      echo "Usage: $name <arg1> <arg2>"
+      return 1
+   fi
 
-    echo "arg1: \$1"
-    echo "arg2: \$2"
+   echo "arg1: \$1"
+   echo "arg2: \$2"
 }
 EOF
-        chmod +x "$file"
-        echo "Created $file"
-    fi
+     chmod +x "$file"
+     echo "Created $file"
+   fi
 
-    edit "$file"
-    source $file
-    git:publish "Added $name" 
+   edit "$file"
+   source $file
+   git:publish "Added $name" 
 }

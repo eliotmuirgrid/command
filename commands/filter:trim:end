@@ -1,11 +1,11 @@
 filter:trim:end() {
-    local string="$1"
-    local search="$2"
+   local string="$1"
+   local search="$2"
 
-    [[ -z "$string" || -z "$search" ]] && {
-        echo "Usage: filter:trim:end <string> <search>" >&2
-        return 1
-    }
+   [[ -z "$string" || -z "$search" ]] && {
+      echo "Usage: filter:trim:end <string> <search>" >&2
+      return 1
+   }
 
-    echo "${string%"$search"*}"
+   echo "${string%"$search"*}"
 }

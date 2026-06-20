@@ -1,9 +1,9 @@
 command:remove() {
-    local name="$1"
-    if [[ -z "$name" ]] ; then
-        echo "Usage: command:remove <name> "
-        return 1
-    fi
-    git rm ~/command/$name
-    git:publish "Removed command $name"
+   local name="$1"
+   if [[ -z "$name" ]] ; then
+      echo "Usage: command:remove <name> "
+      return 1
+   fi
+   git rm ~/command/$name
+   git:publish "Removed command $name"
 }

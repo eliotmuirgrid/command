@@ -1,11 +1,11 @@
 edit() {
-   local file="${1:-i.md}"
+  local file="${1:-i.md}"
 
-   if [[ "$file" != *.* ]]; then
-      if [[ ! -e "$file" ]]; then
-         file="${file}.md"
-      fi
-   fi
+  if [[ "$file" != *.* ]]; then
+     if [[ ! -e "$file" ]]; then
+        file="${file}.md"
+     fi
+  fi
 
-   nvim -c "lua require('boot')" "$file"
+  nvim -c "lua require('boot')" "$file"
 }

@@ -1,6 +1,6 @@
 filter:trim:begin() {
-    local string="$1"
-    local search="$2"
+   local string="$1"
+   local search="$2"
 
-    echo "${string#*"$search"}"
+   echo "${string#*"$search"}"
 }

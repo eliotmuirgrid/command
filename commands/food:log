@@ -1,24 +1,23 @@
 food:log() {
-    local name=$1
-    local quantity=$2
+   local name=$1
+   local quantity=$2
 
-    local file="$HOME/press/health/food_$(date -f '%Y-%m-%d').md"
+   local file="$HOME/press/health/food_$(date -f '%Y-%m-%d').md"
 
-    [[ -z "$name" ]] && {
-        echo "Usage: food:log <food> <quantity>" >&2
-        return 1
-    }
+   [[ -z "$name" ]] && {
+      echo "Usage: food:log <food> <quantity>" >&2
+      return 1
+   }
 
-    mkdir -p "${file:h}"
+   mkdir -p "${file:h}"
 
-    if [[ ! -f "$file" ]]; then
-        cat > "$file" <<EOF
+   if [[ ! -f "$file" ]]; then
+      cat > "$file" <<EOF
 | Time | Food | Quantity |
 |------|------|----------|
 EOF
-    fi
-    local time=$(date '+%h:%m');
+   fi
+   local time=$(date '+%h:%m');
 
-    echo "|$time|$name|$quantity|"
-
+   echo "|$time|$name|$quantity|"
 }

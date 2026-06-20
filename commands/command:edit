@@ -1,11 +1,11 @@
 command:edit() {
-    local arg1="$1"
+   local arg1="$1"
 
-    if [[ -z "$arg1" ]]; then
-        echo "Usage: command:edit <arg1>"
-        return 1
-    fi
-    edit $CMD_DIR/$arg1
-    source $CMD_DIR/$arg1 
-    git:publish "Edited $arg1"
+   if [[ -z "$arg1" ]]; then
+      echo "Usage: command:edit <arg1>"
+      return 1
+   fi
+   edit $CMD_DIR/$arg1
+   source $CMD_DIR/$arg1 
+   git:publish "Edited $arg1"
 }
