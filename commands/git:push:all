@@ -1,0 +1,7 @@
+git:push:all() {
+   for remote in $(git remote); do
+      echo "Pushing $branch to $remote..."
+      git push -u "$remote" "$branch" || failed=1
+   done
+   return "$failed"
+}
