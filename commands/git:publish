@@ -1,6 +1,6 @@
 git:publish() {
    local msg="${*:-Update}"
-   local root="$HOME/${pwd:top}"
+   local root="$HOME/$(pwd:top)"
    echo "$root" 
 
    #git add . || return
