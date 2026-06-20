@@ -4,5 +4,8 @@ agent:planner() {
         return 1
     fi
 
-    agent:file chatgpt $HOME/command/lua/planner.md $1 | glow
+    local out=agent:file chatgpt $HOME/command/lua/planner.md $1
+
+
+    echo $out |glow
 }
