@@ -1,0 +1,14 @@
+string:split() {
+    nameref out="$1"
+    typeset string="$2"
+    typeset sep="${3:-,}"
+
+    out=()
+
+    while [[ "$string" == *"$sep"* ]]; do
+        out+=("${string%%"$sep"*}")
+        string="${string#*"$sep"}"
+    done
+
+    out+=("$string")
+}
