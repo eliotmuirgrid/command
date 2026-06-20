@@ -1,4 +1,5 @@
 git:push:all() {
+   branch="$(git branch --show-current)" 
    for remote in $(git remote); do
       echo "Pushing $branch to $remote..."
       git push -u "$remote" "$branch" || failed=1
