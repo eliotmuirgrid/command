@@ -7,5 +7,5 @@ command:edit() {
     fi
     edit $CMD_DIR/$arg1
     source $CMD_DIR/$arg1 
-    command:change "Edited $arg1"
+    git:publish "Edited $arg1"
 }

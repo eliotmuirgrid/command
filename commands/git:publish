@@ -1,10 +1,10 @@
 git:publish() {
    local msg="${*:-Update}"
-   #local root
-   #root = ${pwd:top}
-   #echo "$root" 
-   git add . || return
-   git commit -m "$msg" || return
+   local root="$HOME/${pwd:top}"
+   echo "$root" 
 
-   git:push:all
+   #git add . || return
+   #git commit -m "$msg" || return
+
+   #git:push:all
 }
