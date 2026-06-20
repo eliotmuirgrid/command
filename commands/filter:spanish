@@ -1,0 +1,19 @@
+filter:spanish() {
+    local file
+
+    [[ -z "$1" ]] && {
+        echo "Usage: filter:spanish <file>" >&2
+        return 1
+    }
+
+    file="$(file:list:smart "$1")"
+
+    {
+        echo "Translate the following Markdown to Spanish."
+        echo
+        echo "Preserve all Markdown formatting."
+        echo "Translate only the human-readable text."
+        echo
+        file:read "$file"
+    } | agent:chatgpt
+}
