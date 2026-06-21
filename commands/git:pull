@@ -1,0 +1,8 @@
+git:pull() {
+   if [[ -z "$1" ]] ; then
+      echo "Usage: git:pull <remote name>"
+      return 1
+   fi
+
+   git pull "$1" master 
+}
