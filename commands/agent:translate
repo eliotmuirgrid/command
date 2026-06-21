@@ -4,8 +4,8 @@ agent:translate() {
       return 1
    fi
 
-   local file="$(file:list:smart "$1")"
-   local language = $2;
+   local file=$1
+   local language=$2
    # TODO - multiple files
    agent:file chatgpt $file "Translate to $language - just the translation - no commentary"
 }
