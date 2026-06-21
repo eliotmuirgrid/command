@@ -4,5 +4,5 @@ agent:translate() {
       return 1
    fi
 
-   agent:file chatgpt $1 "Translate to $2 - just the translation - no commentary"
+   agent:file chatgpt "$1" "Translate to $2 - just the translation - no commentary"
 }
