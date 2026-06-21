@@ -3,5 +3,5 @@ git:remote:remove() {
       echo "Usage: git:remote:remove <name>"
       return 1
    fi
-   git remove remote $1
+   git remote remove $1
 }
