@@ -19,7 +19,7 @@ If you need a little bit of help with understanding how to install these tools i
 
 They use zsh which you can run on Linux and Mac os x and I am told on can run on Windows.
 
-## Possible Uses
+## Graduates - Get Employed in Healthcare IT Security A Growing Field
 
 If you are a graduate trying to find employment opportunities in Healthcare IT technology this could give you an edge in the marketplace.  It will enable you to demonstrate to your prospective employer how wide open their systems are to attack.  You can follow me and discover how to secure their systems.  Ransomware attacks are a huge problem in the healthcare IT right now and this tool chain makes everything available to you with an easy learning curve.
 
