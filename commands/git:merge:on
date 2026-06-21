@@ -1,0 +1,3 @@
+git:merge:on() {
+   git config pull.rebase false
+}
