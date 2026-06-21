@@ -1,25 +1,4 @@
-# Introducing Burp Suite
-
-To understand the potential for these tools can be used please see the press release about [Burp Suite](https://github.com/eliotmuirgrid/press/blob/main/safety/escrow/burp.md).
-
-But Burp Suite isn't just for security conscious administrators.  It's also for people that just want to save time.
-
-For instance I love listening to music when I work so [music:play](commands/music:play) makes it simple for me to quickly listen to what I want to.
-
-And I love to communicate so [md:speak:apple](commands/md:speak:apple) makes it simple for me to quickly listen to what I want to.
-
-And I love to communicate people who speak Spanish [filter:spanish](commands/filter:spanish) makes it simple for me to translate what I write to Spanish speakers.
-
-I also have a great sense of humour and I live in the Cayman Islands which has a fine history of Piracy in it's early history and so just for
-fun I wrote [filter:pirate](commands/filter:pirate). 
-
-## Installation
-
-If you need a little bit of help with understanding how to install these tools in your environment I'm happy to help.
-
-They use zsh which you can run on Linux and Mac os x and I am told on can run on Windows.
-
-## Graduates - Get Employed in Healthcare IT Security - A Growing Field
+# For IT Graduates wanting Employment in Healthcare IT As White Hat Security Expert
 
 If you are a graduate trying to find employment opportunities in Healthcare IT technology this could give you an edge in the marketplace.  It will enable you to demonstrate to your prospective employer how wide open their systems are to attack.  You can follow me and discover how to secure their systems.  Ransomware attacks are a huge problem in the healthcare IT right now and this tool chain makes everything available to you with an easy learning curve.
 
@@ -28,6 +7,36 @@ If you have problems I will be happy to make myself accessble to early adopters 
 Security is everyone's responsibility and I am here to help those who are serious about security in healthcare.
 
 Also these tools are just plain fun to use and you can learn a lot about automation.  I'm always looking to use my time more efficiently and willing to share what I learn with my followers.
+
+## Installation
+
+If you need a little bit of help with understanding how to install these tools in your environment I'm happy to help.
+
+They use z-shell which is one of the nicest shells available.
+
+It's the default shell on Mac OS X these days and you can I believe it can even run on Windows.  I haven't done it yet but I think on a Mac or Linux machine it won't be that hard.  Nothing is
+that complicated.
+
+To understand the potential for these tools can be used please see the press release about [Burp Suite](https://github.com/eliotmuirgrid/press/blob/main/safety/escrow/burp.md).
+
+## Burp Suite is also Fun for Ordinary Folks
+
+But Burp Suite isn't just for security conscious administrators.  It's also for ordinary folks that just want to save time automating all those annoying tasks.
+
+For instance I love listening to music on Spotify when I work so [music:play](commands/music:play) makes it simple for me to quickly listen to what I want to.
+
+And I love to communicate so [md:speak:apple](commands/md:speak:apple) makes it simple for me to quickly listen to what I write in markdown (this document is written in markdown).
+
+And I love to communicate people who speak Spanish [filter:spanish](commands/filter:spanish) makes it simple for me to translate what I write to Spanish speakers.
+
+I also have a great sense of humour and I live in the Cayman Islands which has a fine history of Piracy in it's early history and so just for
+fun I wrote [filter:pirate](commands/filter:pirate). 
+
+## Free for educational purposes
+
+At least for now while the tools are in beta.  Fork them if you want to guarantee your access to this useful toolset.  Once you get the hang of it you'll be
+amazed at what you can do once you embrace hacking open source tools and realize that when we just make the effort as hackers to communicate a little more
+clearly everyone benefits. Burp suite is all about making open source computing and fun anyone who is curious and willing to experiment and learn.
 
 ## License Terms
 
