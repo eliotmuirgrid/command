@@ -1,18 +1,24 @@
 md:speak() {
     local file="${1:-i.md}"
     local filter=$2
-    local voice =$3
+
+    local text;
 
     [[ "$file" != *.md ]] && file="${file}.md"
 
     if [[ ! -f "$file" ]]; then
-        echo "md:speak:apple: file not found: $file" >&2
+        echo "md:speak: file not found: $file" >&2
         return 1
     fi
 
-    if [[ -n "$filter" ]]; then
-       "filter:$filter" "$file" | pandoc -f markdown -t plain | "speak:$voice"
-    else
-       pandoc "$file" -t plain | "speak:$voice" 
-    fi
+    #if [[ -n "$filter" ]]; then
+    #   text=$(filter:$filter "$file" | pandoc -f markdown -t plain 
+    #else
+    #fi
+    text=$(pandoc "$file" -t plain)
+    #if [[ -n "$filter" ]]; then
+    #   text=$(filter:$filter $text);
+    #fi
+    echo "$text"
+    speak:piper "$text"
 }

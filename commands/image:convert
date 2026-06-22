@@ -1,0 +1,7 @@
+image:convert() {
+   if [[ -z "$1" ]] || [[ -z "$2" ]]; then
+       echo "Usage: image:convert file format"
+       return 1
+   fi
+ 
+}
