@@ -1,5 +1,5 @@
 command:add2() {
-   if $(file:exists $1) then
+   if file:exists \"$1\"; then
       echo "FSDFS"
    fi
 }
