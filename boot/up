@@ -1,12 +1,13 @@
 # Super important to know where you are in the file system
 PROMPT='%m:%~ %# '
-CMD_DIR=$HOME/command/commands
+FLOW_SHELL=$HOME/flowshell
+FLOW_COMMANDS=$FLOW_SHELL/commands
+export LUA_PATH="$FLOW_SHELL/nvim/?.lua"
 
 # Load custom shell commands
-for f in $CMD_DIR/*; do
-  #echo "Install $f"
-  source "$f"
+for f in $FLOW_COMMANDS/*; do
+  if [[ -f $f && $(basename "$f") != *.* ]]; then
+     #echo "Install $f"
+     source "$f"
+  fi
 done
-
-# Get VIM to use custom commands
-echo "set runtimepath^=$HOME/command/vim" > $HOME/.vimrc

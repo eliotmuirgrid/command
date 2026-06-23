@@ -1,3 +1,0 @@
-/Users/eliotmuir/command/commands/life:fff() {
-   arg:check 1 "/Users/eliotmuir/command/commands/life:fff" || return;
-}
