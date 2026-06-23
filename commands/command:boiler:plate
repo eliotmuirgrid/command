@@ -1,5 +1,6 @@
 command:boiler:plate() {
-   cat > "$1" <<EOF
+   local name=$1; 
+   cat > "$name" <<EOF
 $name() {
    arg:check 1 "$@" || return;
 }
