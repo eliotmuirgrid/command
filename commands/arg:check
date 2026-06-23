@@ -1,8 +1,5 @@
 arg:check() {
    local required=$1
-
-   (( ARGC >= required )) && return 0;
-
-   echo "Usage: ${funcstack[2]}" >&2
-   return 1
+   shift
+   (( $# >= required ))
 }
