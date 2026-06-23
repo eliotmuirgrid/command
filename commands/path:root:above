@@ -1,6 +1,6 @@
 path:root:above() {
    local root="$(path:simplify $1)"
    local file="$(path:simplify $2)"
-   echo "Root: $root File: $file"
+   #echo "Root: $root File: $file"
    ! string:starts "$file" "$root/"
 }
