@@ -1,5 +1,5 @@
 #TODO - ARGH COMPLICATED - DEAL LATER
-file:list:smart2() {
+file:list:smart() {
    local file ext
 
    for file in "$@"; do
