@@ -1,12 +1,4 @@
-# For IT Graduates wanting Employment in Healthcare IT As A White Hat Security Expert
-
-If you are a graduate trying to find employment opportunities in Healthcare IT technology this could give you an edge in the marketplace.  It will enable you to demonstrate to your prospective employer how wide open their systems are to attack.  You can follow me and discover how to secure their systems.  Ransomware attacks are a huge problem in the healthcare IT right now and this tool chain makes everything available to you with an easy learning curve.
-
-If you have problems I will be happy to make myself accessble to early adopters to get all the kinks ironed out.
-
-Security is everyone's responsibility and I am here to help those who are serious about security in healthcare.
-
-Also these tools are just plain fun to use and you can learn a lot about automation.  I'm always looking to use my time more efficiently and willing to share what I learn with my followers.
+# FlowShell - A new user friendly shell framework for your computer
 
 ## Installation
 
@@ -46,7 +38,7 @@ Read more about [the purpose of FlowShell](https://github.com/eliotmuirgrid/pres
 
 Before using or incorporating someone else’s intellectual property, it is prudent to understand the applicable licensing terms.
 
-At present, the licensing terms for this code have not yet been disclosed. Any organization considering its use should carefully evaluate the legal and commercial implications before proceeding.
+At present, the licensing terms for this code have not yet been determined. Any organization considering its use should carefully evaluate the legal and commercial implications before proceeding.
 
 In addition, portions of this technology may be covered by patents that I own. Anyone considering the use, modification, distribution, or commercialization of this code should ensure they understand any applicable intellectual property rights and restrictions.
 
@@ -54,5 +46,5 @@ If you are interested in using this technology commercially or operationally, I 
 
 Making informed decisions about licensing, intellectual property, support, and production readiness at the outset is far preferable to discovering limitations or obligations later.
 
-If you're a hacker and you just want to learn about stuff then I can't really stop you from playing around with these things and you will learn a lot. 
+If you're curious and you just want to learn about stuff then I can't really stop you from playing around with these things and you will learn a lot. 
 
