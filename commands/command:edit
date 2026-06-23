@@ -1,11 +1,6 @@
 command:edit() {
-   local arg1="$1"
-
-   if [[ -z "$arg1" ]]; then
-      echo "Usage: command:edit <arg1>"
-      return 1
-   fi
-   edit $CMD_DIR/$arg1
-   source $CMD_DIR/$arg1 
-   command:publish "Edited $arg1"
+   arg:check 1 "@" || return 1
+   edit $CMD_DIR/$1
+   source $CMD_DIR/$1 
+   command:publish "Edited $1"
 }
