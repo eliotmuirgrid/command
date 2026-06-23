@@ -3,6 +3,6 @@ arg:check() {
 
    (( ARGC >- required )) return 0;
 
-   echo "Usage: ${funcstack[2]}
+   echo "Usage: ${funcstack[2]}"
    return 1;
 }
