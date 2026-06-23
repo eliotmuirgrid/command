@@ -11,5 +11,5 @@ path:simplify() {
       esac
    done
 
-   printf '/%s\n' "${(j:/:)stack}"
+   printf '%s\n' "${(j:/:)stack}"
 }
