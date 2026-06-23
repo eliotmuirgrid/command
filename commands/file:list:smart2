@@ -4,6 +4,12 @@ file:list:smart2() {
    for file in "$@"; do
       [[ -z "$file" ]] && continue
 
+      # If caller already supplied an extension, do not add another one.
+      if [[ "$file" == *.* ]]; then
+         echo "$file"
+         continue
+      fi
+
       if [[ -e "$file" ]]; then
          echo "$file"
          continue
