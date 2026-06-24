@@ -3,8 +3,8 @@ chrome:focus:tab() {
 
    osascript "$1" <<'APPLESCRIPT'
 on run argv
-   set needle to item 1 of argv
    log "Telling Chrome"
+   set needle to item 1 of argv
    tell application "Google Chrome"
       log "Start"
       repeat with w in windows
