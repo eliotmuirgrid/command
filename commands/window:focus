@@ -4,18 +4,22 @@ window:focus() {
    local app
 
    # Find the app whose window title matches (case-insensitive)
-   app=$(osascript -e "
-      set windowTitle to \\"$title\\"
-      tell application \\"System Events\\"
-         repeat with proc in (application processes)
-            repeat with win in (windows of proc)
-               if (name of win as string) contains windowTitle then
-                  return name of proc
-               end if
+   app=$(osascript "$title" <<'APPLESCRIPT'
+      on run argv
+         set windowTitle to item 1 of argv
+
+         tell application "System Events"
+            repeat with proc in application processes
+               repeat with win in windows of proc
+                  if (name of win as string) contains windowTitle then
+                     return name of proc
+                  end if
+               end repeat
             end repeat
-         end repeat
-      end tell
-   ")
+         end tell
+      end run
+APPLESCRIPT
+   )
 
    if [ -z "$app" ]; then
       echo "No window found with title containing: $title"
