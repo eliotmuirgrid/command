@@ -1,0 +1,5 @@
+press:find() {
+   arg:check 1 "$@" || return;
+
+   dir:change:temp ~/press file:find $1
+}
