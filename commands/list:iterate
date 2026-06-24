@@ -7,6 +7,6 @@ list:iterate() {
    typeset item
 
    for item in $list; do
-      "$func" "$item" "$@"
+      $(func $item) 
    done
 }
