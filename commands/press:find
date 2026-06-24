@@ -1,5 +1,8 @@
 press:find() {
    arg:check 1 "$@" || return;
 
-   dir:change:temp ~/press file:find $1
+   local list =$(dir:change:temp ~/press file:find $1)
+
+
+   echo $list
 }
