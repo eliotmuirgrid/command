@@ -1,0 +1,12 @@
+list:iterate() {
+   arg:check 2 "$@" || return;
+   typeset list="$1"
+   typeset func="$2"
+   shift 2
+
+   typeset item
+
+   for item in $list; do
+      "$func" "$item" "$@"
+   done
+}
