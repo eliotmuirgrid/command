@@ -4,7 +4,7 @@ press:find() {
    local list="$(dir:change:temp ~/press file:find $1)"
 
    echo $list
-   for item in $list; do                                                   
+   for item in "${list[@]}"; do
       press:open $item 
    done
 }
