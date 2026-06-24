@@ -1,9 +1,8 @@
 press:find() {
    arg:check 1 "$@" || return;
 
-   local list="$(dir:change:temp ~/press file:find $1)"
-
-   echo $list
+   local result="$(dir:change:temp ~/press file:find $1)"
+   set -A list -- result
    for item in "${list[@]}"; do
       press:open $item 
    done
