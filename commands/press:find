@@ -3,10 +3,5 @@ press:find() {
 
    local result="$(dir:change:temp ~/press file:find $1)"
    echo $result 
-   typeset -a list
-   set -A list -- $result
-   for item in "${list[*]}"; do
-      echo $item
-      press:open $item 
-   done
+   list:iterate $result press:open
 }
