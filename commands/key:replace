@@ -1,5 +1,4 @@
 key:replace() {
-   arg:check 1 "$@" || return;
    osascript <<'APPLESCRIPT'
 tell application "System Events"
    keystroke "a" using command down
