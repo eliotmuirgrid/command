@@ -1,0 +1,4 @@
+string:starts() {
+   arg:check 2 "$@" || return;
+   [[ "$1" == "$2"* ]]
+}

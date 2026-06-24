@@ -1,22 +1,6 @@
 path:root:above() {
-    # Usage: path:root:above ROOT_PATH TEST_PATH
-    local root="$(readlink -f -- "$1")"
-    local test="$(readlink -f -- "$2")"
-
-    # Check for missing args
-    if [ -z "$root" ] || [ -z "$test" ]; then
-        echo "Usage: path:root:above ROOT_PATH TEST_PATH" >&2
-        return 2
-    fi
-
-    # Is test path outside root path?
-    case "$test" in
-        "$root"* )  # $test starts with $root = NOT above
-            return 1
-            ;;
-        * )
-            # $test is outside $root ("above" the root)
-            return 0
-            ;;
-    esac
+   local root="$(path:simplify $1)"
+   local file="$(path:simplify $2)"
+   #echo "Root: $root File: $file"
+   ! string:starts "$file" "$root/"
 }
