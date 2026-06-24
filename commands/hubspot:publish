@@ -28,5 +28,5 @@ EOF
 {% endblock faq %}
 FEB
 )
-    echo "$header $middle $footer"
+   echo "$header $middle $footer" | pbcopy
 }
