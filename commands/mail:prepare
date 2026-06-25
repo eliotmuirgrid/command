@@ -1,3 +1,12 @@
 mail:prepare() {
-   arg:check 3 $@" || return;
+   # email
+   # subject 
+   # body
+   # attachment 
+   local email=$1
+   local subject=$1
+   local body=$3 | ""
+   local attachment=$4
+
+   echo "Sending email to $email Subject: $subject \n$body\nattachment:$attachment" 
 }
