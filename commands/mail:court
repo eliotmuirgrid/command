@@ -1,0 +1,8 @@
+mail:court() {
+   arg:check 1 "$@" || return;
+
+   speak:piper $1 voice.wav
+   mail:prepare FamilyTrialOffice-SCJ-Toronto@ontario.ca "RE: Muir v Muir; Court File No. FS-25-00049704-0000" $1 voice.wav
+   afplay voice.wav
+   rm voice.wav
+} 
