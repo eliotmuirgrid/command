@@ -1,11 +1,7 @@
 mail:prepare() {
-   # email
-   # subject 
-   # body
-   # attachment 
    local email=$1
    local subject=$2
-   local body=$3 | ""
+   local body=$3
    local attachment=$4
 
    echo "Sending email to $email Subject: $subject \n$body\nattachment:$attachment" 
@@ -21,7 +17,7 @@ tell application "Mail"
     }
 
     tell newMessage
-        make new to recipient at end of to recipients with properties {address:"$to"}
+        make new to recipient at end of to recipients with properties {address:"$email"}
 
         make new attachment with properties {file name:POSIX file "$attachment"} 
             at after the last paragraph
