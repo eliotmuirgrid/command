@@ -4,7 +4,7 @@ mail:prepare() {
    # body
    # attachment 
    local email=$1
-   local subject=$1
+   local subject=$2
    local body=$3 | ""
    local attachment=$4
 
