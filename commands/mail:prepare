@@ -9,4 +9,23 @@ mail:prepare() {
    local attachment=$4
 
    echo "Sending email to $email Subject: $subject \n$body\nattachment:$attachment" 
+
+   osascript <<EOF
+tell application "Mail"
+    activate
+
+    set newMessage to make new outgoing message with properties {¬
+        visible:true, ¬
+        subject:"$subject", ¬
+        content:"$body"
+    }
+
+    tell newMessage
+        make new to recipient at end of to recipients with properties {address:"$to"}
+
+        make new attachment with properties {file name:POSIX file "$attachment"} ¬
+            at after the last paragraph
+    end tell
+end tell
+EOF
 }
