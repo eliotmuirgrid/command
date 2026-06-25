@@ -1,0 +1,19 @@
+git:copy:fresh() {
+   arg:check 2 "$@" || return;
+
+   local source="~$1"
+   local target="~$2"
+
+   mkdir -p "$target"
+
+   rsync -a \
+      --exclude='.git' \
+      "$source"/ "$target"/
+
+   (
+      cd "$target" || exit 1
+      git init
+      git add .
+      git commit -m "Initial commit"
+   )
+}
