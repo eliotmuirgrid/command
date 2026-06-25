@@ -3,5 +3,5 @@ press:find() {
 
    local result="$(dir:change:temp ~/press file:find $1)"
    echo $result 
-   list:iterate $result press:open
+   dir:change:temp ~/press list:iterate $result press:open
 }
