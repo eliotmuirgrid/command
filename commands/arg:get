@@ -1,0 +1,16 @@
+arg:get() {
+   local target_key="$1"
+   local default_value="$2"
+   shift 2  # Leave only the user's name-value arguments in "$@"
+
+   # Explicitly loop through arguments to find the match safely
+   for pair in "$@"; do
+      if [[ "$pair" == "${target_key}="* ]]; then
+         echo "${pair#*=}"
+         return 0
+      fi
+   done
+
+   # Fallback if no matching key is found
+   echo "$default_value"
+}
