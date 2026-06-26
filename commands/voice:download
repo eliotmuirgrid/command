@@ -1,10 +1,11 @@
 voice:download() {
-   arg:check 1 "$@" || return
-   echo "Downloading $voice..."
+   arg:check 2 "$@" || return
 
-   curl -L -O \
-      "https://huggingface.co/rhasspy/piper-voices/resolve/main/${voice}.onnx"
+   local path="$1"
+   local file="$2"
 
-   curl -L -O \
-      "https://huggingface.co/rhasspy/piper-voices/resolve/main/${voice}.onnx.json"
+   echo "Downloading $file..."
+
+   curl -L -f -O "$BASE/$path/$file.onnx"
+   curl -L -f -O "$BASE/$path/$file.onnx.json"
 }
