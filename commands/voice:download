@@ -4,6 +4,8 @@ voice:download() {
    local dir="$1"
    local file="$2"
 
+   BASE="https://huggingface.co/rhasspy/piper-voices/resolve/main"
+
    echo "Downloading $file..."
 
    curl -L -f -O "$BASE/$dir/$file.onnx"
