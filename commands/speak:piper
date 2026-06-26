@@ -1,7 +1,7 @@
 speak:piper(){
    local voice="${2:-libritts-high}"
    local scale="${3:-1.5}"
-   local output="${4:-output"
+   local output="${4:-output}"
 
    local file="$HOME/piper-voices/en_US-$voice.onnx"
 
