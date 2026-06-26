@@ -9,9 +9,13 @@ mail:document() {
 
    local text="$(md:strip $file)"
 
-   local body="$header\n\n$text"
+   local url="$(press:url $file)"
+
+   local body="$header\n\n$url\n\n$text"
 
    local subject="Re: $(md:path $file)"
+
+   press:publish $file
 
    local plain_body="There is a second version of this email with sound,
 please indicate if it went through.  Many firewalls

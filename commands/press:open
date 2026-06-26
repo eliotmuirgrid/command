@@ -1,9 +1,11 @@
 press:open() {
-    local file="${1:-i}"
-    local md_path
+   #local file="${1:-i}"
+   #local md_path
+   #md_path="$(md:path "$file")"
+   #md_path="$(filter:trim:begin "$md_path" "/press")"
 
-    md_path="$(md:path "$file")"
-    md_path="$(filter:trim:begin "$md_path" "/press")"
+   local url="$(press:url $1)"
 
-    url:open "http://github.com/eliotmuirgrid/press/blob/master${md_path}"
+   #url:open "http://github.com/eliotmuirgrid/press/blob/master${md_path}"
+   url:open $url;
 }

@@ -1,0 +1,11 @@
+press:url() {
+   arg:check 1 "$@" || return;
+
+   local file="${1:-i}"
+   local md_path
+
+   md_path="$(md:path "$file")"
+   md_path="$(filter:trim:begin "$md_path" "/press")"
+
+   echo "https://github.com/eliotmuirgrid/press/blob/master${md_path}"
+}

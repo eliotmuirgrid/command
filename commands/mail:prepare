@@ -13,7 +13,7 @@ mail:prepare() {
       cc_script="make new cc recipient at end of cc recipients with properties {address:\"$cc\"}"
    fi
 
-   echo "Sending email to $to (cc=$cc) Subject: $subject \n$body\nattachment:$attachment" 
+   #echo "Sending email to $to (cc=$cc) Subject: $subject \n$body\nattachment:$attachment" 
 
    osascript <<EOF
 tell application "Mail"
