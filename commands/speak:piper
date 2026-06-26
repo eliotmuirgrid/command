@@ -1,4 +1,4 @@
-speak:piper() 
+speak:piper(){
    local voice="${2:-libritts-high}"
 
    local file="~/piper-voices/en_US-$voice.onnx"
