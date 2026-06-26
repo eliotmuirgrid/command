@@ -1,6 +1,6 @@
 speak:piper() {
    echo "$1" |  /Users/eliotmuir/piper-test/venv/bin/piper \
-     --model ~/piper-voices/en_US-lessac-medium.onnx \
+     --model ~/piper-voices/en_US-libritts_r-medium.onnx \
      --output_file "$2" >/dev/null
 
 }
