@@ -1,0 +1,10 @@
+voice:download() {
+   arg:check 1 "$@" || return
+   echo "Downloading $voice..."
+
+   curl -L -O \
+      "https://huggingface.co/rhasspy/piper-voices/resolve/main/${voice}.onnx"
+
+   curl -L -O \
+      "https://huggingface.co/rhasspy/piper-voices/resolve/main/${voice}.onnx.json"
+}
