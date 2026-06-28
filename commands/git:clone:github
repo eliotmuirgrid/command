@@ -1,0 +1,8 @@
+git:clone:github() {
+   arg:check 2 "$@" || return;
+
+   local repo="$1"
+   local dest="$2"
+
+   git clone "git@github.com:eliotmuirgrid/${repo}.git" "$dest"
+}

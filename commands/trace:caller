@@ -1,0 +1,3 @@
+trace:caller() {
+   echo $funcstack[3]
+}

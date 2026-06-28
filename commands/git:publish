@@ -1,11 +1,14 @@
 git:publish() {
-   local msg="${*:-Update}"
+   local msg="${arg:default $1 Update}"
+   echo $msg;
    local root="$HOME/$(pwd:top)"
-   echo "$root" 
+   echo "$root"
+   dir:push "$root"
 
-   git -C $root add . || return
-   git -C $root commit -m "$msg" || return
+   git $root add . || return
+   git $root commit -m "$msg" || return
 
    git pull --no-edit
    git:push:all
+   dir:pop
 }

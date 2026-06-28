@@ -1,0 +1,4 @@
+dir:remove() {
+   arg:check 1 "$@" || return
+   rm -r -- "$1"
+}

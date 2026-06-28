@@ -1,15 +1,11 @@
 arg:check() {
     local expected=$1
-    shift # Remove the expected count, leaving only passed arguments
-    
+    shift
+
     local actual=$#
-    # $funcstack[2] contains the name of the function that called assert_args
-    local func_name=$funcstack[2] 
-    
     if [[ $actual -ne $expected ]]; then
-        print -u2 "🚨 [Error] ${func_name} requires exactly ${expected} argument(s), but received ${actual}."
-        return 1
+       print -u2 "🚨 [Error] $(trace:caller) requires exactly ${expected} argument(s), but received ${actual}."
+       return 1
     fi
-    
     return 0
 }

@@ -1,0 +1,7 @@
+git:clone:bitbucket() {
+   arg:check 2 "$@" || return;
+   local repo="$1"
+   local dest="$2"
+
+   git clone "git@bitbucket.org:eliotmuir/${repo}.git" "$dest"
+}

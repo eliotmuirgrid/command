@@ -1,0 +1,9 @@
+dir:create() {
+    # Check that at least one argument was provided
+    if [[ $# -lt 1 ]]; then
+        echo "Usage: dir:create <dirname> [...]"
+        return 1
+    fi
+
+    mkdir -p "$@"
+}

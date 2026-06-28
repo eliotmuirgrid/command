@@ -1,0 +1,7 @@
+dir:push() {
+   if [ $# -lt 1 ]; then
+      echo "Usage: dir:push <directory>"
+      return 1
+   fi
+   pushd "$1" || return 1
+}

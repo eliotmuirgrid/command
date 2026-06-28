@@ -1,0 +1,4 @@
+file:remove() {
+   arg:check 1 "$@" || return
+   rm -- "$1"
+}

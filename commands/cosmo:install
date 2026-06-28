@@ -1,0 +1,13 @@
+cosmo:install() {
+   local dir="$HOME/cosmo" 
+   dir:remove $dir
+   dir:create $dir 
+   dir:push   $dir
+
+   file:download cosmo.zip/pub/cosmocc/cosmocc.zip
+
+   file:download   https://cosmo.zip/pub/cosmocc/cosmocc.zip
+   file:uncompress cosmocc.zip 
+   file:remove     cosmocc.zip
+   dir:pop
+}

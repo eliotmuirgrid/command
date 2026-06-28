@@ -1,0 +1,7 @@
+sandbox:play() {
+   local var1="$(arg:default $1 Fred)"
+   local var2="${1:-Fred}";
+   echo $var1 $var2
+}
+
+ 
